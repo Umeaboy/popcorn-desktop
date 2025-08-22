@@ -69,8 +69,8 @@ Download and install:
 
 Via .deb package:
 
-  _**Firstly, be aware** in some cases, missings dependencies packages (libatomic1, libgconf-2-4, libcanberra-gtk-module) were reported to be required for the app to works.  
-  **If the app don't start for you too**, in this case, **try `sudo apt update && sudo apt install libatomic1 libgconf-2-4 libcanberra-gtk-module`** to be sure your system have the required dependencies._
+  _**Firstly, be aware** in some cases, missings dependencies packages (libatomic1, libgconf-2-4, libcanberra-gtk-module) were reported to be required for the app to work. From Ubuntu 23.10 and newer releases the package libconf-2-4 is replaced with libglib2.0-bin.
+  **If the app don't start for you too**, in this case, **try `sudo apt update && sudo apt install libatomic1 libgconf-2-4 libcanberra-gtk-module`** or for Ubuntu 23.10 and newer releases do ** `sudo apt update && sudo apt install libatomic1 libglib2.0-bin`** to be sure your system have the required dependencies._
 
 Via archive and command line (tested on ubuntu 18.04 and 20.04):
   1. Download Popcorn Time archive from the github repo for the **latest release** :
@@ -78,7 +78,7 @@ Via archive and command line (tested on ubuntu 18.04 and 20.04):
   2. Create popcorn-time folder in /opt/:  
   `sudo mkdir /opt/popcorn-time`  
   3. Install unzip && dependencies (they should not be always required but some users needed them to make Popcorn Time working):  
-  `sudo apt update && sudo apt install unzip libcanberra-gtk-module libgconf-2-4 libatomic1`  
+  `sudo apt update && sudo apt install unzip libcanberra-gtk-module libgconf-2-4 libatomic1` or for Ubuntu 23.10 and newer releases do `sudo apt update && sudo apt install unzip libcanberra-gtk3-module libglib2.0-bin libatomic`
   4. Extract the zip in /opt/popcorn-time:  
   `sudo unzip Popcorn-Time-0.5.1-linux64.zip -d /opt/popcorn-time`
   5. Create symlink of Popcorn-Time in /usr/bin:  
